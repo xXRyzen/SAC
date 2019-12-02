@@ -23,7 +23,7 @@
 ###########################################################################
 #Enables i am waching you message
 
-   I-AM-WATCHING-YOU: false
+   If you are caught hacking or using exploits, you will be banned on sight, no excuses!: true
 
 #Which color should be used in SAC?
 #Supported colors:
@@ -70,19 +70,19 @@
 #If yes, which message should be shown?
 
    KickPlayerMessageBool: true
-   KickPlayerMessage: "[SAC] > %PLAYER% was kicked for hacking. I am always watching you."
+   KickPlayerMessage: "[AC] > %PLAYER% was kicked for hacking. Disable hacks or you will be banned."
 
 #Should SAC show a message when someone gets banned?
 #If yes, which message should be shown?
 
-   BanPlayerMessageBool: true
+   BanPlayerMessageBool: false
    BanPlayerMessage: "[SAC] > %PLAYER% was BANNED for hacking. I am always watching you."
 
 #Enable verbose output???
 #Sends a mesage to all OPs if someone is hacking.
 #In some rare cases this might send messages to ranom people.
 
-   Verbose: true
+   Verbose: false
 
 #------------------------# Fly #------------------------#
 #Do you want to enable Fly check?
@@ -93,7 +93,7 @@
 #This check is sneaky. It will suddenly kick or freeze the
 #hacker without any warning or dragback before.
 
-   Fly: true
+   Fly: false
 
 #How many moves may a player be flying before detection?
 #16 Should work fine. (Standard)
@@ -136,7 +136,7 @@
 #immediately take action upon violation,
 #others are sneaky and will suddenly cause a kick.
 
-   KillAura: true
+   KillAura: false
 
 #Angle (3rd-person-pvp prevention)
 #This will block hitting with impossible angles.
@@ -147,7 +147,7 @@
 #This check immediately takes action upon violation.
 #Do you want to enable Angle?
 
-   Angle: true
+   Angle: false
 
 #Minimum check distance
 #How many blocks must 2 Players be away from each
@@ -195,7 +195,7 @@
 #use AGGRESSIVE if you have a smaller server or need
 #really fast detection. Use high thresholds for this.
 
-   Heuristics: 2
+   Heuristics: 1
 
 #DeepHeuristics (Triggerbot/Advanced Aura Detection)
 #This catches combat hacks that actually aim 
@@ -239,7 +239,7 @@
 #How many hits per second should players be allowed to get?
 #Higher this if false positives occur.
 
-   MaxCPS: 12
+   MaxCPS: 15
 
 #How many times must a player hack before detection?
 #35 Should work fine. (Standard)
@@ -250,24 +250,24 @@
 #For AGGRESSIVE Heuristics: 50-70 (I would reccomend about 60)
 #Increase if KillAura causes false poitives.
 
-   KillAura-Threshold: 40
+   KillAura-Threshold:35
 
 #Wich Message Sould be shown if KillAura is detected?
 
-   KillAura-Message: "[SAC] > KillAura is not allowed!"
-   KillAura-HEUR-Message: "[SAC] > Suspicious Combat Behavoir!"
+   KillAura-Message: "[AC] > KillAura is not allowed!"
+   KillAura-HEUR-Message: "[AC] > Suspicious Combat Behavoir!"
 
 #Which Log Message Sould be shown if KillAura is detected?
 
-   KillAura-LogMessage: "[SAC] > %PLAYER% is suspected for KillAura (VL = %AURAVL%)!"
-   KillAura-HEUR-LogMessage: "[SAC] > %PLAYER% is fighting Suspiciously (VL = %HEURVL%)!"
+   KillAura-LogMessage: "[AC] > %PLAYER% is suspected for KillAura (VL = %AURAVL%)!"
+   KillAura-HEUR-LogMessage: "[AC] > %PLAYER% is fighting Suspiciously (VL = %HEURVL%)!"
 
 #-----------------------# Regen #-----------------------#
 #Do you want to enable Regen check?
 #Stops INSANE regeneration.
 #This check immediately takes action upon violation.
 
-   Regen: true
+   Regen: false
 
 #Wich Punishment should take place if Regen is detected?
 
@@ -287,7 +287,7 @@
 #Works Well as of version 3.3.4.
 #This check immediately takes action upon violation.
 
-   FastBow: true
+   FastBow: false
 
 #Wich Punishment should take place if FastBow is detected?
 
@@ -308,7 +308,7 @@
 #This check is sneaky. It will suddenly kick or freeze the
 #hacker without any warning or dragback before.
 
-   Speed: true
+   Speed: false
 
 #Wich Punishment should take place?
 #WARNING: setting this to block will
@@ -324,11 +324,11 @@
 
 #Wich Message Sould be shown if Speed is detected?
 
-   Speed-Message: "[SAC] > Speed is not allowed!"
+   Speed-Message: "[AC] > Speed is not allowed!"
 
 #Which Log Message Sould be shown if Speed is detected?
 
-   Speed-LogMessage: "[SAC] > %PLAYER% is suspected for Speed (VL = %SPEEDVL%)!"
+   Speed-LogMessage: "[AC] > %PLAYER% is suspected for Speed (VL = %SPEEDVL%)!"
 
 #----------------------# Reach #------------------------#
 #Do you want to enable Reach check?
@@ -345,7 +345,7 @@
 #Standard: 4.0
 #NEVER set this to lower than 1
 
-   MaxRange:  4.0
+   MaxRange:  5.0
 
 #----------------------# Glide #------------------------#
 #Do you want to enable Glide check?
@@ -353,7 +353,7 @@
 #This check is sneaky. It will suddenly kick or freeze the
 #hacker without any warning or dragback before.
 
-   Glide: true
+   Glide: false
 
 #How fast must a player be falling to not get violated for glide?
 #Tweaks:
@@ -368,11 +368,11 @@
 
 #Wich Message Sould be shown if Glide is detected?
 
-   Glide-Message: "[SAC] > Glide is not allowed!"
+   Glide-Message: "[AC] > Glide is not allowed!"
 
 #Which Log Message Sould be shown if Glide is detected?
 
-   Glide-LogMessage: "[SAC] > %PLAYER% is hacking Glide!"
+   Glide-LogMessage: "[AC] > %PLAYER% is hacking Glide!"
 
 #----------------------# ForceOP #-----------------------#
 #######################################################
@@ -409,15 +409,15 @@
 #bugs and glitches.
 #NEVER set this to 0
 
-   NoClip-Threshold: 75
+   NoClip-Threshold: 80
 
 #Which Message Should be shown if NoClip is detected?
 
-   NoClip-Message: "[SAC] > NoClip is not allowed!"
+   NoClip-Message: "[AC] > NoClip is not allowed!"
 
 #Which Log Message Sould be shown if NoClip is detected?
 
-   NoClip-LogMessage: "[SAC] > %PLAYER% is suspected for NoClip (VL = %NOCLIPVL%)!"
+   NoClip-LogMessage: "[AC] > %PLAYER% is suspected for NoClip (VL = %NOCLIPVL%)!"
 
 #//////////////////////////////////////////////////////
 #//                                                  //
